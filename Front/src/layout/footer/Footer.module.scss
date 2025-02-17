@@ -1,0 +1,25 @@
+@import '../../assets/styles/variables';
+
+.footer {
+  text-align: center;
+  background-color: $bg-layout;
+  padding: 1.5rem;
+  color: $bg-color;
+  font-family: $font-family;
+  border-top: 1px solid lighten($bg-layout, 10%);
+}
+
+.footerText {
+  color: $bg-color;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 18px;
+  color: $bg-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
+}

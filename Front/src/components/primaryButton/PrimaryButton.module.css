@@ -1,0 +1,10 @@
+.primaryButton {
+  background-color: #65C8D0 !important;
+  border-color: #65C8D0 !important;
+  font-family: "Nunito", sans-serif;
+  margin: 5px;
+}
+.primaryButton:hover {
+  background-color: #8cd6dc !important;
+  border-color: #8cd6dc !important;
+}/*# sourceMappingURL=PrimaryButton.module.css.map */

@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2E6072;
+  padding: 0 2rem;
+}
+
+.logo h1 {
+  color: #F9FAFA;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #F9FAFA;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.navLinks li a:hover {
+  color: #3ebac4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #F9FAFA;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app .main-content {
+  display: flex;
+  flex: 1;
+}
+.app .content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #F9FAFA;
+}/*# sourceMappingURL=App.css.map */

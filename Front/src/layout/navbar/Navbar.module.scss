@@ -1,0 +1,69 @@
+@import "../../assets/styles/variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-layout;
+  margin: 30px 80px;
+  padding: 0 2rem;
+  border-radius: 30px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  h2 {
+    color: $bg-color;
+    font-size: 1.2rem;
+    font-family: $font-family;
+  }
+} 
+
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: $bg-color;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+.icon {
+  font-size: 1.5rem;
+  color: $bg-color;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+
+.avatar {
+  cursor: pointer;
+}

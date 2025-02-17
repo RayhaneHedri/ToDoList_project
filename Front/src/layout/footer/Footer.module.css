@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+  background-color: #2E6072;
+  padding: 1.5rem;
+  color: #F9FAFA;
+  font-family: "Nunito", sans-serif;
+  border-top: 1px solid #3d7f96;
+}
+
+.footerText {
+  color: #F9FAFA;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 18px;
+  color: #F9FAFA;
+  transition: color 0.3s ease;
+}
+.icon:hover {
+  color: #3ebac4;
+}/*# sourceMappingURL=Footer.module.css.map */

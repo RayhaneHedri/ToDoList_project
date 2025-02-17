@@ -1,0 +1,26 @@
+@import '../src/assets/styles/variables';
+@import '../src/layout/navbar/Navbar.module';
+@import '../src/layout/footer/Footer.module';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $bg-color;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+
+  .content {
+    flex: 1;
+    padding: 2rem;
+    background-color: $bg-color;
+  }
+}

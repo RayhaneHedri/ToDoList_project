@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2E6072;
+  margin: 30px 80px;
+  padding: 0 2rem;
+  border-radius: 30px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo h2 {
+  color: #F9FAFA;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #F9FAFA;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.navLinks li a:hover {
+  color: #3ebac4;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #F9FAFA;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.icon:hover {
+  color: #3ebac4;
+}
+
+.avatar {
+  cursor: pointer;
+}/*# sourceMappingURL=Navbar.module.css.map */

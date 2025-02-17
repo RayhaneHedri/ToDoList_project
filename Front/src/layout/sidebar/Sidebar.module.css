@@ -1,0 +1,41 @@
+.sidebar {
+  width: 250px;
+  background-color: #F3F4F5;
+  height: 100vh;
+  padding: 1rem;
+  color: #65C8D0;
+  font-family: "Nunito", sans-serif;
+  border-radius: 30px;
+  margin-left: 80px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  margin: 1rem 0;
+  text-decoration: none;
+  color: #65C8D0;
+  font-size: 1.2rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+.menu-item:hover {
+  color: #3ebac4;
+}
+
+.usersSection .sectionTitle {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #211428;
+}
+
+.username {
+  color: #211428;
+}/*# sourceMappingURL=Sidebar.module.css.map */

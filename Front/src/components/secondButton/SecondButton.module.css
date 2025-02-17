@@ -1,0 +1,11 @@
+.secondButton {
+  background-color: #F9FAFA !important;
+  border-color: #65C8D0 !important;
+  font-family: "Nunito", sans-serif;
+  color: #65C8D0;
+  margin: 5px;
+}
+.secondButton:hover {
+  background-color: #dde3e3 !important;
+  border-color: #dde3e3 !important;
+}/*# sourceMappingURL=SecondButton.module.css.map */

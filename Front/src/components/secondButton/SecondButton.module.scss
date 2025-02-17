@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables';
+
+.secondButton {
+  background-color: $bg-color !important;
+  border-color: $primary-color !important;
+  font-family: $font-family;
+  color: $primary-color;
+  margin: 5px;
+
+  &:hover {
+    background-color: darken($bg-color, 10%) !important;
+    border-color: darken($bg-color, 10%) !important;
+  }
+}
