@@ -1,5 +1,5 @@
-import React from "react";
-import { Avatar, Typography,Divider, List } from "antd";
+import React, { useState } from "react";
+import { Avatar, Typography,Divider, List, Modal } from "antd";
 import { ArrowRightOutlined, UserOutlined } from "@ant-design/icons";
 import styles from "./ProfilePage.module.scss";
 import PrimaryButton from "../../components/primaryButton/PrimaryButton";
@@ -8,6 +8,7 @@ import photo1 from "../../../public/gallery/business-corporate-people-working-co
 import photo2 from "../../../public/gallery/group-elephants-walking-dry-grass-wilderness.jpg";
 import photo3 from "../../../public/gallery/happy-waiter-serving-food-group-cheerful-friends-pub.jpg";
 import photo4 from "../../../public/gallery/get.jpeg";
+import UpdateProfileForm from "../../components/updateProfileForm/UpdateProfileForm";
 
 const { Title, Text } = Typography;
 
@@ -18,8 +19,23 @@ const ProfilePage: React.FC = () => {
     bio: "A passionate developer and tech enthusiast.",
   };
 
-  // Import images from your gallery folder
   const photos = [photo1, photo2, photo3, photo4];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  const handleUpdateProfile = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className={styles.profilePage}>
@@ -34,7 +50,22 @@ const ProfilePage: React.FC = () => {
           <Title level={3}>{user.name}</Title>
           <Text>{user.email}</Text>
           <p>{user.bio}</p>
-          <PrimaryButton onClick={() => {}}>Update Profile</PrimaryButton>
+          <PrimaryButton onClick={showModal}>Update Profile</PrimaryButton>
+          <Modal
+        title="Add User"
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={[
+          <SecondButton key="cancel" onClick={handleCancel}>
+            Cancel
+          </SecondButton>,
+          <PrimaryButton key="submit" onClick={handleUpdateProfile}>
+            Submit
+          </PrimaryButton>,
+        ]}
+      >
+        <UpdateProfileForm />
+      </Modal>
         </div>
       </div>
 

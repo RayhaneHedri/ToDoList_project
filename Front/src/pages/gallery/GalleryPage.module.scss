@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables";
+
+.galleryPage {
+  padding: 2rem;
+  background-color: $bg-color;
+}
+
+
+.photoWrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.seeMoreContainer {
+  margin-top: 1rem;
+}
+
+.seeMoreButton {
+  font-size: 1rem;
+}
+
+////responsive
+@media (max-width: 768px) {
+  .photoWrapper {
+    height: 120px;
+  }
+}
