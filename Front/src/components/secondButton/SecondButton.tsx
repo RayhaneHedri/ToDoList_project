@@ -3,11 +3,17 @@ import { Button } from 'antd';
 
 import styles from './SecondButton.module.css';
 
+interface SecondButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+}
 
-const SecondButton: React.FC = () => {
-  return (
-    <Button type="primary" className={styles.secondButton} >hello2</Button>
-  );
-};
+const SecondButton: React.FC<SecondButtonProps> = ({ children, onClick }) => {
+    return (
+      <Button type="primary" className={styles.secondButton} onClick={onClick}>
+        {children}
+      </Button>
+    );
+  };
 
 export default SecondButton;

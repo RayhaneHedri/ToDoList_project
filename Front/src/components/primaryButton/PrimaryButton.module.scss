@@ -1,13 +1,26 @@
+@use "sass:color";
 @import '../../assets/styles/variables';
+
 
 .primaryButton {
   background-color: $primary-color !important;
   border-color: $primary-color !important;
   font-family: $font-family;
   margin: 5px;
+  padding: 18px 20px ;
+  font-size: medium !important;
 
   &:hover {
-    background-color: lighten($primary-color, 10%) !important;
-    border-color: lighten($primary-color, 10%) !important;
+    background-color: color.adjust($primary-color, $lightness: 10%) !important;
+    border-color: color.adjust($primary-color, $lightness: 10%) !important;
   }
+}
+
+////responsive
+@media (max-width: 768px) {
+  .primaryButton {
+    padding: 12px;
+    font-size: small !important;
+  }  
+  
 }

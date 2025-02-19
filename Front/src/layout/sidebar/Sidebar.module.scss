@@ -20,27 +20,33 @@
   flex-direction: column;
 }
 
-.menu-item {
-  margin: 1rem 0;
-  text-decoration: none;
-  color: $primary-color;
-  font-size: 1.2rem;
-  display: block;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $hover-color;
-  }
-}
 
 .usersSection {
   .sectionTitle {
     margin-bottom: 1rem;
     font-size: 1.2rem;
+    font-weight:600;
     color: $text-color;
   }
 }
 
 .username{
   color: $text-color;
+  font-weight:600;
+}
+
+////responsive
+@media (max-width: 768px) {
+  .sidebar {
+    width: 140px;
+    margin-left: 40px;
+  }
+  .usersSection {
+    .sectionTitle {
+      font-size: 1rem;
+    }
+  }
+  .username{
+    font-size: 0.8rem;
+  }
 }

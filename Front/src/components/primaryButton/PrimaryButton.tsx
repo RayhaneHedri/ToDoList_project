@@ -4,11 +4,12 @@ import styles from './PrimaryButton.module.scss';
 
 interface PrimaryButtonProps {
   children: React.ReactNode;
+  onClick? : () => void;
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ children }) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({ children, onClick }) => {
   return (
-    <Button type="primary" className={styles.primaryButton}>
+    <Button type="primary" className={styles.primaryButton} onClick={onClick} >
       {children}
     </Button>
   );

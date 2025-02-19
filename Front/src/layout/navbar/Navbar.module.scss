@@ -10,60 +10,113 @@
   border-radius: 30px;
   height: 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    h2 {
+      color: $bg-color;
+      font-size: 1.2rem;
+      font-family: $font-family;
+    }
+    .icon {
+      color: $bg-color;
+    }
+  }
+
+  .navLinks {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      li a {
+        text-decoration: none;
+        color: $bg-color;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .icon {
+      font-size: 1.5rem;
+      color: $bg-color;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    .avatar {
+      cursor: pointer;
+    }
+  }
+}
+
+.menuButton {
+  display: none;
 }
 
 
-.logo{
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  h2 {
+
+
+////responsive
+@media (max-width: 768px) {
+  .navbar{
+    margin: 30px 40px;
+  }
+  .navLinks {
+    display: none;
+  }
+  .icons {
+    .icon {
+      font-size: 20px !important;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+    }
+  }
+  .menuButton {
+    display: inline-block;
     color: $bg-color;
-    font-size: 1.2rem;
-    font-family: $font-family;
-  }
-} 
-
-
-.navLinks {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.navLinks li a {
-  text-decoration: none;
-  color: $bg-color;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $hover-color;
   }
 }
 
+.drawer {
+  .drawerNavLinks {
+    list-style: none;
+    padding: 0;
 
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+    li {
+      margin-bottom: 1rem;
 
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 1.2rem;
 
-.icon {
-  font-size: 1.5rem;
-  color: $bg-color;
-  cursor: pointer;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $hover-color;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
   }
-}
-
-
-.avatar {
-  cursor: pointer;
 }

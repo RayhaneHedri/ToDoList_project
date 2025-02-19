@@ -1,0 +1,42 @@
+@import '../../assets/styles/variables';
+
+.usersPage {
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.customSearch {
+  width: 300px;
+  margin-right: 16px;
+
+  .ant-input {
+    border-color: initial;
+
+    &:hover {
+      border-color: $primary-color !important; 
+    }
+
+    &:focus,
+    &.ant-input-focused {
+      border-color: $primary-color !important;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    .customSearch {
+        width: 150px;
+        margin-right: 16px;
+    }      
+    
+  }

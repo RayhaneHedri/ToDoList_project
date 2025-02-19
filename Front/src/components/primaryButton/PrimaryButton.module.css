@@ -3,8 +3,17 @@
   border-color: #65C8D0 !important;
   font-family: "Nunito", sans-serif;
   margin: 5px;
+  padding: 18px 20px;
+  font-size: medium !important;
 }
 .primaryButton:hover {
   background-color: #8cd6dc !important;
   border-color: #8cd6dc !important;
+}
+
+@media (max-width: 768px) {
+  .primaryButton {
+    padding: 12px;
+    font-size: small !important;
+  }
 }/*# sourceMappingURL=PrimaryButton.module.css.map */

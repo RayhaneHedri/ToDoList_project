@@ -1,0 +1,72 @@
+@import '../../assets/styles/variables';
+
+.card {
+  border-radius: 20px;
+  margin: 1rem 0;
+  width: 300px;
+  background-color: $bg-color;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &:hover {
+    background-color: $card-color !important;
+    border-color: $card-color !important;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.assignedUser {
+  color: $text-color;
+}
+
+.statusDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.done {
+  background-color: green;
+}
+
+.notDone {
+  background-color: red;
+}
+
+.statusText {
+  color: $text-color;
+}
+
+.daysText {
+  color: $text-color;
+  font-size: 16px;
+}
+
+.deleteIcon {
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+////responsive
+@media (max-width: 768px) {
+  .card {
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .assignedUser,
+  .statusText,
+  .daysText {
+    font-size: 12px;
+  }
+}

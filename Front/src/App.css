@@ -3,28 +3,119 @@
   justify-content: space-between;
   align-items: center;
   background-color: #2E6072;
+  margin: 30px 80px;
   padding: 0 2rem;
+  border-radius: 30px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.logo h1 {
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar .logo h2 {
   color: #F9FAFA;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
 }
-
-.navLinks {
+.navbar .logo .icon {
+  color: #F9FAFA;
+}
+.navbar .navLinks ul {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
-
-.navLinks li a {
+.navbar .navLinks ul li a {
   text-decoration: none;
   color: #F9FAFA;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
-.navLinks li a:hover {
+.navbar .navLinks ul li a:hover {
+  color: #3ebac4;
+}
+.navbar .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar .icons .icon {
+  font-size: 1.5rem;
+  color: #F9FAFA;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.navbar .icons .icon:hover {
+  color: #3ebac4;
+}
+.navbar .icons .avatar {
+  cursor: pointer;
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 30px 40px;
+  }
+  .navLinks {
+    display: none;
+  }
+  .icons .icon {
+    font-size: 20px !important;
+  }
+  .icons .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .menuButton {
+    display: inline-block;
+    color: #F9FAFA;
+  }
+}
+.drawer .drawerNavLinks {
+  list-style: none;
+  padding: 0;
+}
+.drawer .drawerNavLinks li {
+  margin-bottom: 1rem;
+}
+.drawer .drawerNavLinks li a {
+  text-decoration: none;
+  color: #211428;
+  font-size: 1.2rem;
+}
+.drawer .drawerNavLinks li a:hover {
+  color: #3ebac4;
+}
+
+.footer {
+  text-align: center;
+  background-color: #2E6072;
+  padding: 1.5rem;
+  color: #F9FAFA;
+  font-family: "Nunito", sans-serif;
+  border-top: 1px solid #3d7f96;
+}
+
+.footerText {
+  color: #F9FAFA;
+  font-size: 1rem;
+}
+
+.icon {
+  font-size: 18px;
+  color: #F9FAFA;
+  transition: color 0.3s ease;
+}
+.icon:hover {
   color: #3ebac4;
 }
 

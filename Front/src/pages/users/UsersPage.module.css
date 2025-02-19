@@ -1,0 +1,51 @@
+:where(.css-dev-only-do-not-override-19lec04).ant-input-outlined:focus, :where(.css-dev-only-do-not-override-19lec04).ant-input-outlined:focus-within {
+  border-color: green !important;
+  box-shadow: 0 0 0 2px green !important;
+}
+
+.ant-input-outlined:hover {
+  border-color: #ff4052;
+  background-color: #ffffff;
+}
+
+.ant-input-outlined:hover {
+  border-color: red !important;
+}
+.ant-input-outlined:focus {
+  border-color: rgb(5, 253, 51) !important;
+}
+
+.usersPage {
+  padding: 2rem;
+}
+.usersPage h1 {
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.customSearch {
+  width: 300px;
+  margin-right: 16px;
+}
+.customSearch .ant-input {
+  border-color: initial;
+}
+.customSearch .ant-input:hover {
+  border-color: #65C8D0 !important;
+}
+.customSearch .ant-input:focus, .customSearch .ant-input.ant-input-focused {
+  border-color: #65C8D0 !important;
+  box-shadow: 0 0 0 2px rgba(101, 200, 208, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+  .customSearch {
+    width: 150px;
+    margin-right: 16px;
+  }
+}/*# sourceMappingURL=UsersPage.module.css.map */

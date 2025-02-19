@@ -4,8 +4,18 @@
   font-family: "Nunito", sans-serif;
   color: #65C8D0;
   margin: 5px;
+  padding: 18px 20px;
+  font-size: medium !important;
 }
 .secondButton:hover {
-  background-color: #dde3e3 !important;
-  border-color: #dde3e3 !important;
+  background-color: #daf2f4 !important;
+  border-color: #daf2f4 !important;
+  color: #65C8D0 !important;
+}
+
+@media (max-width: 768px) {
+  .secondButton {
+    padding: 12px;
+    font-size: small !important;
+  }
 }/*# sourceMappingURL=SecondButton.module.css.map */

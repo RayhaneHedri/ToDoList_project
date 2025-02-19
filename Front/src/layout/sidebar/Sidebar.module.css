@@ -18,24 +18,27 @@
   flex-direction: column;
 }
 
-.menu-item {
-  margin: 1rem 0;
-  text-decoration: none;
-  color: #65C8D0;
-  font-size: 1.2rem;
-  display: block;
-  transition: color 0.3s ease;
-}
-.menu-item:hover {
-  color: #3ebac4;
-}
-
 .usersSection .sectionTitle {
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  font-weight: 600;
   color: #211428;
 }
 
 .username {
   color: #211428;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 140px;
+    margin-left: 40px;
+  }
+  .usersSection .sectionTitle {
+    font-size: 1rem;
+  }
+  .username {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=Sidebar.module.css.map */

@@ -6,9 +6,20 @@
   font-family: $font-family;
   color: $primary-color;
   margin: 5px;
+  padding: 18px 20px ;
+  font-size: medium !important;
 
   &:hover {
-    background-color: darken($bg-color, 10%) !important;
-    border-color: darken($bg-color, 10%) !important;
+    background-color: lighten($primary-color, 30%) !important;
+    border-color: lighten($primary-color, 30%) !important;
+    color: $primary-color !important;
   }
+}
+
+@media (max-width: 768px) {
+  .secondButton {
+    padding: 12px;
+    font-size: small !important;
+  }  
+  
 }
