@@ -6,7 +6,7 @@ import { TaskState } from "../../types/TaskState";
 import SecondButton from "../../components/secondButton/SecondButton";
 import { FolderAddOutlined } from "@ant-design/icons";
 import PrimaryButton from "../../components/primaryButton/PrimaryButton";
-import AddTaskForm from "../../components/addTaskForm/addTaskForm";
+import AddTaskForm from "../../components/addTaskForm/AddTaskForm";
 
 const { Search } = Input;
 
@@ -18,6 +18,18 @@ const TasksPage: React.FC = () => {
     days: number;
   }[] = [
     { taskTitle: "Task 1", assignedUser: "Ranim", state: "done", days: 3 },
+    {
+      taskTitle: "Task 2",
+      assignedUser: "Ahmed",
+      state: "not started",
+      days: 5,
+    },
+    {
+      taskTitle: "Task 2",
+      assignedUser: "Ahmed",
+      state: "not started",
+      days: 5,
+    },
     {
       taskTitle: "Task 2",
       assignedUser: "Ahmed",
@@ -45,7 +57,7 @@ const TasksPage: React.FC = () => {
     setIsModalOpen(false);
   };
   return (
-    <div>
+    <div className={styles.tasksPage}>
       <h1>Tasks Page</h1>
       <div className={styles.controls}>
         <Search
@@ -104,6 +116,7 @@ const TasksPage: React.FC = () => {
         ))}
       </Row>
       <h2>Done</h2>
+      <div className={styles.gridWrapper}>
       <Row gutter={[16, 16]} className={styles.userGrid}>
         {tasks.map((task, index) => (
           <Col key={index} xs={24} lg={12} xl={8} xxl={6}>
@@ -116,6 +129,8 @@ const TasksPage: React.FC = () => {
           </Col>
         ))}
       </Row>
+      </div>
+      
     </div>
   );
 };

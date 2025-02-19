@@ -71,13 +71,15 @@ const UsersPage: React.FC = () => {
         <AddUserForm />
       </Modal>
       </div>
-      <Row gutter={[16, 16]} className={styles.userGrid}>
-        {users.map((user, index) => (
-          <Col key={index} xs={24} lg={12} xl={8} xxl={6}>
-            <UserCard name={user.name} role={user.role} email={user.email} />
-          </Col>
-        ))}
-      </Row>
+      <div className={styles.gridWrapper}>
+        <Row gutter={[16, 16]} justify="center" className={styles.userGrid}>
+          {users.map((user, index) => (
+            <Col key={index} xs={24} lg={12} xl={8} xxl={6}>
+              <UserCard name={user.name} role={user.role} email={user.email} />
+            </Col>
+          ))}
+        </Row>
+      </div>
     </div>
   );
 };

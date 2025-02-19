@@ -45,31 +45,22 @@ const AddTaskForm = () => {
             <Input />
           </Form.Item>
           <Form.Item
-            name="assigned user"
-            label="Assigned User"
-            rules={[
-              { required: true, message: 'Please input the email!' },
-            ]}
+            name="days"
+            label="Duration in days"
+            rules={[{ required: true, message: 'Please input the number of Days!' }]}
           >
             <Input />
           </Form.Item>
           <Form.Item
-            name="role"
-            label="Role"
-            rules={[{ required: true, message: 'Please select a role!' }]}
+            name="assigned user"
+            label="Assigned User"
+            rules={[{ required: true, message: 'Please select a user!' }]}
           >
             <Select>
-              <Option value="admin">Admin</Option>
-              <Option value="editor">Editor</Option>
-              <Option value="user">User</Option>
+              <Option value="admin">Ahmed</Option>
+              <Option value="editor">Ranim</Option>
+              <Option value="user">Youssef</Option>
             </Select>
-          </Form.Item>
-          <Form.Item
-            name="password"
-            label="Password"
-            rules={[{ required: true, message: 'Please input the password!' }]}
-          >
-            <Input.Password />
           </Form.Item>
         </Form>
     </>
