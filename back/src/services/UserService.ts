@@ -2,6 +2,8 @@ import keycloakClient from "../config/db";
 import { createUser } from "../repositories/UserRepository";
 
 export class UserService {
+
+/////sync databases
   async syncUsers() {
     try {
         const res = await keycloakClient.query(
