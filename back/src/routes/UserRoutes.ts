@@ -1,23 +1,16 @@
-import express from 'express';
-import { UserService } from '../services/UserService';
+import express from "express";
+import { syncUsersHandler, addUserHandler } from "../controllers/UserController";
+import { authMiddleware, checkAdmin } from "../middleware/auth";
 
 const router = express.Router();
-const userService = new UserService();
 
 
-router.post('/sync-users', async (req, res) => {
-  try {
-    const result = await userService.syncUsers();
-    res.status(200).json({ message: 'User sync complete', result });
-  } catch (error) {
-    console.error('Error syncing users:', error);
-    res.status(500).json({ message: 'User sync failed', error: error.message });
-  }
+router.post("/sync-users", authMiddleware, syncUsersHandler);
+
+router.post("/add-user", authMiddleware, checkAdmin, addUserHandler);
+
+router.get("/test", (req, res) => {
+  res.status(200).send("Test route works");
 });
-
-router.get('/test', (req, res) => {
-    res.status(200).send("Test route works");
-  });
-  
 
 export default router;

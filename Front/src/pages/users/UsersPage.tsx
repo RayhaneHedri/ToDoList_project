@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Input, Modal } from "antd";
+import { Row, Col, Input, Modal, Form } from "antd";
 import styles from "./UsersPage.module.scss";
 import SecondButton from "../../components/secondButton/SecondButton";
 import UserCard from "../../components/cardUser/CardUser";
@@ -19,23 +19,18 @@ const UsersPage: React.FC = () => {
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [form] = Form.useForm();
 
   const handleSearch = (value: string) => {
     console.log("Searching for:", value);
   };
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
+  const showModal = () => setIsModalOpen(true);
+  const handleCancel = () => setIsModalOpen(false);
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
   const handleAddUser = () => {
-    setIsModalOpen(false);
+    console.log("submit clicked")
+    form.submit();
   };
 
   return (
@@ -48,7 +43,6 @@ const UsersPage: React.FC = () => {
           onSearch={handleSearch}
           allowClear
         />
-
         <SecondButton onClick={showModal}>
           <span>
             <UserAddOutlined />
@@ -56,20 +50,14 @@ const UsersPage: React.FC = () => {
           Add User
         </SecondButton>
         <Modal
-        title="Add User"
-        open={isModalOpen}
-        onCancel={handleCancel}
-        footer={[
-          <SecondButton key="cancel" onClick={handleCancel}>
-            Cancel
-          </SecondButton>,
-          <PrimaryButton key="submit" onClick={handleAddUser}>
-            Submit
-          </PrimaryButton>,
-        ]}
-      >
-        <AddUserForm />
-      </Modal>
+          title="Add User"
+          open={isModalOpen}
+          onCancel={handleCancel}
+          footer={null}
+        >
+          <AddUserForm form={form} onSuccess={handleCancel} />
+
+        </Modal>
       </div>
       <div className={styles.gridWrapper}>
         <Row gutter={[16, 16]} justify="center" className={styles.userGrid}>

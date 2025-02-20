@@ -28,4 +28,34 @@ export class UserService {
       throw error;
     }
   }
+
+  ////add user
+  async addUser({ username, email, password }) {
+    try {
+      ///insert user in keycloak database
+      const insertQuery = `
+        INSERT INTO user_entity (username, email, password)
+        VALUES ($1, $2, $3)
+        RETURNING id
+      `;
+      const result = await keycloakClient.query(insertQuery, [username, email, password]);
+      
+      if (!result.rows || result.rows.length === 0) {
+        throw new Error("Failed to create user in Keycloak");
+      }
+      
+      const newUserId = result.rows[0].id;
+      console.log(`User created in Keycloak with id ${newUserId}`);
+
+      ////insert user in todolist database
+      const savedUser = await createUser(newUserId, username, email);
+      console.log(`User created in todolist DB with id ${savedUser.id}`);
+      
+      return savedUser;
+    } catch (error) {
+      console.error("Error in addUser:", error);
+      throw error;
+    }
+  }
+  
 }
