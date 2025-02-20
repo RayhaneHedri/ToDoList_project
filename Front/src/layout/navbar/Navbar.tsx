@@ -6,17 +6,31 @@ import {
   RightCircleOutlined,
   UserOutlined,
   MenuOutlined,
+  LogoutOutlined,
+  SettingOutlined,
 } from "@ant-design/icons";
 import styles from "./Navbar.module.scss";
+import { useKeycloak } from "@react-keycloak/web";
 
 const Navbar: React.FC = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const { keycloak } = useKeycloak();
 
   const userMenu = (
     <Menu>
-      <Menu.Item key="profile">Profile</Menu.Item>
-      <Menu.Item key="settings">Settings</Menu.Item>
-      <Menu.Item key="logout">Logout</Menu.Item>
+      <Menu.Item key="profile" icon={<UserOutlined />}>
+        <Link to="/profile">Profile</Link>
+      </Menu.Item>
+      <Menu.Item key="settings" icon={<SettingOutlined />}>
+        Settings
+      </Menu.Item>
+      <Menu.Item
+        key="logout"
+        icon={<LogoutOutlined />}
+        onClick={() => keycloak.logout()}
+      >
+        Logout
+      </Menu.Item>
     </Menu>
   );
 
@@ -38,16 +52,24 @@ const Navbar: React.FC = () => {
       <div className={styles.navLinks}>
         <ul>
           <li>
-            <Link to="/tasks" onClick={closeDrawer}>Tasks</Link>
+            <Link to="/tasks" onClick={closeDrawer}>
+              Tasks
+            </Link>
           </li>
           <li>
-            <Link to="/users" onClick={closeDrawer}>Users</Link>
+            <Link to="/users" onClick={closeDrawer}>
+              Users
+            </Link>
           </li>
           <li>
-            <Link to="/profile" onClick={closeDrawer}>Profile</Link>
+            <Link to="/profile" onClick={closeDrawer}>
+              Profile
+            </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={closeDrawer}>Gallery</Link>
+            <Link to="/gallery" onClick={closeDrawer}>
+              Gallery
+            </Link>
           </li>
         </ul>
       </div>
@@ -83,16 +105,24 @@ const Navbar: React.FC = () => {
       >
         <ul className={styles.drawerNavLinks}>
           <li>
-            <Link to="/tasks" onClick={closeDrawer}>Tasks</Link>
+            <Link to="/tasks" onClick={closeDrawer}>
+              Tasks
+            </Link>
           </li>
           <li>
-            <Link to="/users" onClick={closeDrawer}>Users</Link>
+            <Link to="/users" onClick={closeDrawer}>
+              Users
+            </Link>
           </li>
           <li>
-            <Link to="/profile" onClick={closeDrawer}>Profile</Link>
+            <Link to="/profile" onClick={closeDrawer}>
+              Profile
+            </Link>
           </li>
           <li>
-            <Link to="/gallery" onClick={closeDrawer}>Gallery</Link>
+            <Link to="/gallery" onClick={closeDrawer}>
+              Gallery
+            </Link>
           </li>
         </ul>
       </Drawer>

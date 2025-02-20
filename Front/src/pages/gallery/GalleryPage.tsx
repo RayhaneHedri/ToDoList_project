@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Upload, Modal, List, Button, Typography, Divider } from "antd";
+import { Upload, Modal, List, Typography, Divider } from "antd";
 import { ArrowRightOutlined, PlusOutlined } from "@ant-design/icons";
 import styles from "./GalleryPage.module.scss";
 import SecondButton from "../../components/secondButton/SecondButton";

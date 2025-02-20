@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables";
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.spinner {
+  margin-bottom: 1rem;
+}
+
+.loadingText {
+  color: $text-color;
+}

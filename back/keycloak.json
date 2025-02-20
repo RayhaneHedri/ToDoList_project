@@ -1,0 +1,8 @@
+{
+  "realm": "toDoList",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "ToDoList_Back",
+  "public-client": true,
+  "confidential-port": 0
+}
